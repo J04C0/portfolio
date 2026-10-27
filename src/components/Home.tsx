@@ -83,10 +83,7 @@ export function Home({ lang }: { lang: Lang }) {
         {/* Hero */}
         <section className="grid grid-cols-1 items-center gap-12 pt-14 pb-20 md:pt-20 lg:grid-cols-12 lg:pb-28">
           <div className="lg:col-span-7">
-            <p className="enter font-mono text-xs uppercase tracking-[0.16em] text-accent" style={{ ["--i" as string]: 0 }}>
-              {t.hero.eyebrow}
-            </p>
-            <h1 className="enter mt-5 text-4xl leading-[1.05] font-semibold tracking-tighter md:text-5xl lg:text-[2.4rem] xl:text-[2.75rem]" style={{ ["--i" as string]: 1 }}>
+            <h1 className="enter text-4xl leading-[1.05] font-semibold tracking-tighter md:text-5xl lg:text-[2.4rem] xl:text-[2.75rem]" style={{ ["--i" as string]: 1 }}>
               {t.hero.title[0]}
               <span className="block text-accent">{t.hero.title[1]}</span>
             </h1>

@@ -22,7 +22,7 @@ export type Role = {
 type Content = {
   meta: { title: string; description: string };
   nav: { about: string; work: string; experience: string; contact: string; other: string };
-  hero: { eyebrow: string; title: [string, string]; sub: string; ctaWork: string; ctaCv: string };
+  hero: { title: [string, string]; sub: string; ctaWork: string; ctaCv: string };
   about: { title: string; paragraphs: string[] };
   work: { title: string; note: string; projects: Project[]; pending: string; zoom: string; close: string };
   bot: { title: string; kind: string; status: string; text: string; facts: string[]; stack: string[] };
@@ -46,11 +46,10 @@ export const content: Record<Lang, Content> = {
   en: {
     meta: {
       title: "Joaquín Gomensoro | Full stack developer",
-      description: "Full stack developer and Electronic Engineering student in Montevideo, Uruguay. Open to remote work.",
+      description: "Full stack developer and Electronic Engineering student in Montevideo, Uruguay.",
     },
     nav: { about: "About", work: "Work", experience: "Experience", contact: "Contact", other: "ES" },
     hero: {
-      eyebrow: "Open to remote work",
       title: ["Full stack developer.", "Electronic engineering student."],
       sub: "Three years building payment alerting at a fintech. Now building management systems for real clients, remotely from Uruguay.",
       ctaWork: "View work",
@@ -153,11 +152,10 @@ export const content: Record<Lang, Content> = {
   es: {
     meta: {
       title: "Joaquín Gomensoro | Desarrollador full stack",
-      description: "Desarrollador full stack y estudiante de Ingeniería Electrónica en Montevideo, Uruguay. Disponible para trabajo remoto.",
+      description: "Desarrollador full stack y estudiante de Ingeniería Electrónica en Montevideo, Uruguay.",
     },
     nav: { about: "Sobre mí", work: "Proyectos", experience: "Experiencia", contact: "Contacto", other: "EN" },
     hero: {
-      eyebrow: "Disponible para trabajo remoto",
       title: ["Desarrollador full stack.", "Estudiante de electrónica."],
       sub: "Tres años construyendo alertas de pagos en una fintech. Hoy desarrollo sistemas de gestión para clientes reales.",
       ctaWork: "Ver proyectos",
