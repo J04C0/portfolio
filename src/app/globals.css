@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f8fb;
+  --surface: #eaf0f6;
+  --text: #0f1b2d;
+  --muted: #4f5d72;
+  --line: #d5dee9;
+  --accent: #0a7c6e;
+  --accent-ink: #f6f8fb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c1526;
+    --surface: #132038;
+    --text: #e4eaf3;
+    --muted: #96a5bc;
+    --line: #22324d;
+    --accent: #5fe0c4;
+    --accent-ink: #0a1322;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--bg);
+  /* Un brillo suave del color de acento arriba a la izquierda, fijo al hacer scroll. */
+  background-image: radial-gradient(900px 600px at 0% 0%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 70%);
+  background-attachment: fixed;
+  color: var(--text);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* Entrada del hero y aparición de secciones al hacer scroll. Sin JS: solo CSS. */
+@media (prefers-reduced-motion: no-preference) {
+  .enter {
+    animation: enter 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(var(--i, 0) * 80ms);
+  }
+
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: enter linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
