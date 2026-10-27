@@ -62,7 +62,7 @@ export const content: Record<Lang, Content> = {
         "I spent three years at Handy, a payments fintech serving about 20,000 small businesses, building the AWS alerting that caught fraud and failed transactions and sent each one to the person who could fix it. Today I build two client systems end to end, from the database schema and its security policies to the interface.",
         "I'm also in my third year of Electronic Engineering, so I work on both sides of the wire: TypeScript for the web, a soldering iron and an Arduino for the rest.",
         "At MoscaLabs I teach programming and robotics to kids aged 5 to 12, which comes down to taking something complex and making it simple enough for them to build themselves.",
-        "Away from the keyboard and the workbench, I climb.",
+        "Outside of work, I like to clear my head with sport, especially climbing.",
       ],
     },
     work: {
@@ -169,7 +169,7 @@ export const content: Record<Lang, Content> = {
         "Estuve tres años en Handy, una fintech de pagos con unos 20.000 comercios, construyendo las alertas en AWS que detectaban fraude y transacciones fallidas y le llegaban a quien podía resolverlas. Hoy desarrollo dos sistemas para clientes de punta a punta, del esquema de la base y sus políticas de seguridad a la interfaz.",
         "Además curso tercer año de Ingeniería Electrónica, así que trabajo de los dos lados del cable: TypeScript para la web, soldador y Arduino para el resto.",
         "En MoscaLabs enseño programación y robótica a niños de 5 a 12 años, que en el fondo es agarrar algo complejo y volverlo lo bastante simple como para que lo construyan ellos mismos.",
-        "Lejos del teclado y del banco de trabajo, hago escalada.",
+        "Fuera del trabajo, me gusta despejar la cabeza con el deporte, sobre todo con la escalada.",
       ],
     },
     work: {
