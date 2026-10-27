@@ -26,6 +26,17 @@ const Status = ({ kind, status }: { kind: string; status: string }) => (
   </p>
 );
 
+// "Idea: detalle". La idea va marcada para que el punto se pueda escanear sin leerlo entero.
+const Point = ({ text }: { text: string }) => {
+  const i = text.indexOf(": ");
+  if (i === -1) return <span>{text}</span>;
+  return (
+    <span className="text-muted">
+      <span className="font-medium text-text">{text.slice(0, i + 1)}</span> {text.slice(i + 2)}
+    </span>
+  );
+};
+
 function ProjectBlock({ p, flip, lang }: { p: Project; flip: boolean; lang: Lang }) {
   return (
     <article className="reveal grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
@@ -45,7 +56,7 @@ function ProjectBlock({ p, flip, lang }: { p: Project; flip: boolean; lang: Lang
           {p.points.map((pt) => (
             <li key={pt} className="flex gap-3 leading-relaxed">
               <span aria-hidden className="mt-[0.6em] h-px w-4 shrink-0 bg-accent" />
-              {pt}
+              <Point text={pt} />
             </li>
           ))}
         </ul>

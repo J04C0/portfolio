@@ -46,21 +46,21 @@ export const content: Record<Lang, Content> = {
   en: {
     meta: {
       title: "Joaquín Gomensoro | Full stack developer",
-      description: "Full stack developer and Electronic Engineering student in Montevideo, Uruguay.",
+      description: "Full stack developer in Montevideo, Uruguay. I build the parts of software that can't fail quietly: access control, audit trails and alerting.",
     },
     nav: { about: "About", work: "Work", experience: "Experience", contact: "Contact", other: "ES" },
     hero: {
       title: ["Full stack developer.", "Electronic engineering student."],
-      sub: "Three years building payment alerting at a fintech. Now building management systems for real clients.",
+      sub: "I build the parts of software that can't fail quietly: access control, audit trails and alerting.",
       ctaWork: "View work",
       ctaCv: "Download CV",
     },
     about: {
       title: "About",
       paragraphs: [
-        "Hi, I'm Joaco. I'm a developer from Montevideo, Uruguay, and I like building things people actually use. Right now I'm building two management systems for real clients, from the database up.",
-        "Before that I spent three years at Handy, a payments fintech, building the alerts that told the team when a transaction went wrong. Along the way I moved from Systems to Electronic Engineering, so these days I work on both sides: TypeScript for the web, a soldering iron and an Arduino for everything else.",
-        "When I'm not coding I teach programming and robotics to kids at MoscaLabs, and I go rock climbing.",
+        "Hi, I'm Joaco, a full stack developer from Montevideo. Most of my work lives where users never look: who can see which data, what gets recorded, and who finds out when something breaks.",
+        "I spent three years at Handy, a payments fintech serving about 20,000 small businesses, building the AWS alerting that caught fraud and failed transactions and sent each one to the person who could fix it. Today I build two client systems end to end, from the database schema and its security policies to the interface.",
+        "I'm also in my third year of Electronic Engineering, so I work on both sides of the wire: TypeScript for the web, a soldering iron and an Arduino for the rest. At MoscaLabs I teach programming and robotics to kids aged 5 to 12, where explaining things simply isn't optional. And I climb.",
       ],
     },
     work: {
@@ -75,11 +75,11 @@ export const content: Record<Lang, Content> = {
           name: "Sensitive records platform",
           kind: "Client project",
           status: "In development",
-          summary: "Back office that handles sensitive personal data, where who can see what matters as much as the features.",
+          summary: "A back office for sensitive personal data, where who can see what matters as much as any feature.",
           points: [
-            "Access is granted per record and per person, and some roles never see sensitive data. Row-level security in PostgreSQL enforces it, not the UI.",
-            "Signed entries can't be edited, and every change or read of a record is logged. Both live in the database.",
-            "The permission matrix and every RLS policy are tested against a real Postgres in CI.",
+            "Access control lives in the database: permissions are granted per record and per person, and Postgres row-level security enforces them even if the UI has a bug.",
+            "Nothing disappears: signed entries are immutable, and every change and every read is written to an audit log.",
+            "Permissions are tested, not assumed: the permission matrix and every RLS policy run against a real Postgres in CI.",
           ],
           stack: RECORDS_STACK,
           images: [
@@ -92,11 +92,11 @@ export const content: Record<Lang, Content> = {
           name: "Multi-tenant operations system",
           kind: "Client project",
           status: "In development",
-          summary: "Day-to-day operations software for a field services company, built around one question: what has to be done next.",
+          summary: "Operations software for a field services company, built around the question its team asks every day: what has to be done next.",
           points: [
-            "Multi-tenant from day one: every table and every query is scoped to the company on the server.",
-            "The pending-work board is computed on the server, so what counts as overdue doesn't depend on the viewer's time zone.",
-            "Architecture decisions recorded as ADRs and enforced by the linter: components can't touch the database, and no color lives outside the theme tokens.",
+            "Built for many companies from day one: every table and every query is scoped to one company on the server.",
+            "One screen answers the daily question: the pending-work board is computed on the server, so \"overdue\" never depends on the viewer's time zone.",
+            "Rules the codebase can't forget: architecture decisions are recorded as ADRs and enforced by the linter, from database access to theme colors.",
           ],
           stack: OPS_STACK,
           images: [
@@ -121,9 +121,9 @@ export const content: Record<Lang, Content> = {
     experience: {
       title: "Experience",
       roles: [
-        { dates: "2026 - now", title: "Freelance Full Stack Developer", org: "Independent", note: "Building two client systems end to end, from the data model to the interface." },
-        { dates: "2026 - now", title: "Technical Support & Instructor", org: "MoscaLabs", note: "Teach programming and robotics to kids aged 5 to 12, and repair the circuits and gear we use." },
-        { dates: "2021 - 2024", title: "Software Developer", org: "Handy", note: "Built AWS alerting for payment fraud and errors at a fintech serving about 20,000 small businesses. Later moved to the Angular front end." },
+        { dates: "2026 - now", title: "Freelance Full Stack Developer", org: "Independent", note: "Design and build two client systems end to end: data model, security policies, server logic and interface." },
+        { dates: "2026 - now", title: "Technical Support & Instructor", org: "MoscaLabs", note: "Teach programming and robotics to kids aged 5 to 12, and keep the lab's circuits and equipment running." },
+        { dates: "2021 - 2024", title: "Software Developer", org: "Handy", note: "Built the AWS alerting (CloudWatch, Lambda, SNS) that flagged fraud and failed payments and routed each error to whoever could fix it, at a fintech serving about 20,000 small businesses. Later moved to the Angular front end." },
       ],
       educationTitle: "Education",
       education: [
@@ -151,21 +151,21 @@ export const content: Record<Lang, Content> = {
   es: {
     meta: {
       title: "Joaquín Gomensoro | Desarrollador full stack",
-      description: "Desarrollador full stack y estudiante de Ingeniería Electrónica en Montevideo, Uruguay.",
+      description: "Desarrollador full stack en Montevideo, Uruguay. Construyo las partes del software que no pueden fallar en silencio: control de acceso, auditoría y alertas.",
     },
     nav: { about: "Sobre mí", work: "Proyectos", experience: "Experiencia", contact: "Contacto", other: "EN" },
     hero: {
       title: ["Desarrollador full stack.", "Estudiante de electrónica."],
-      sub: "Tres años construyendo alertas de pagos en una fintech. Hoy desarrollo sistemas de gestión para clientes reales.",
+      sub: "Construyo las partes del software que no pueden fallar en silencio: control de acceso, auditoría y alertas.",
       ctaWork: "Ver proyectos",
       ctaCv: "Descargar CV",
     },
     about: {
       title: "Sobre mí",
       paragraphs: [
-        "Hola, soy Joaco. Soy desarrollador, de Montevideo, y me gusta construir cosas que la gente usa de verdad. Hoy estoy desarrollando dos sistemas de gestión para clientes reales, desde la base de datos hacia arriba.",
-        "Antes estuve tres años en Handy, una fintech de pagos, armando las alertas que le avisaban al equipo cuando algo fallaba en una transacción. En el camino pasé de Ingeniería en Sistemas a Electrónica, así que hoy trabajo de los dos lados: TypeScript para la web, y soldador y Arduino para todo lo demás.",
-        "Cuando no estoy programando, enseño programación y robótica a niños en MoscaLabs, y hago escalada.",
+        "Hola, soy Joaco, desarrollador full stack de Montevideo. La mayor parte de mi trabajo vive donde el usuario no mira: quién puede ver qué datos, qué queda registrado y quién se entera cuando algo se rompe.",
+        "Estuve tres años en Handy, una fintech de pagos con unos 20.000 comercios, construyendo las alertas en AWS que detectaban fraude y transacciones fallidas y le llegaban a quien podía resolverlas. Hoy desarrollo dos sistemas para clientes de punta a punta, del esquema de la base y sus políticas de seguridad a la interfaz.",
+        "Además curso tercer año de Ingeniería Electrónica, así que trabajo de los dos lados del cable: TypeScript para la web, soldador y Arduino para el resto. En MoscaLabs enseño programación y robótica a niños de 5 a 12 años, donde explicar simple no es opcional. Y hago escalada.",
       ],
     },
     work: {
@@ -180,11 +180,11 @@ export const content: Record<Lang, Content> = {
           name: "Plataforma de registros sensibles",
           kind: "Proyecto para cliente",
           status: "En desarrollo",
-          summary: "Back office que maneja datos personales sensibles, donde quién ve qué importa tanto como las funcionalidades.",
+          summary: "Un back office para datos personales sensibles, donde quién ve qué importa tanto como cualquier funcionalidad.",
           points: [
-            "El acceso se otorga por registro y por persona, y hay roles que nunca ven datos sensibles. Lo garantiza la seguridad a nivel de fila en PostgreSQL, no la interfaz.",
-            "Lo firmado no se puede editar, y cada cambio o lectura de un registro queda anotado. Las dos cosas viven en la base de datos.",
-            "La matriz de permisos y cada política de RLS se prueban contra un Postgres real en CI.",
+            "El acceso vive en la base de datos: los permisos se otorgan por registro y por persona, y la seguridad a nivel de fila de Postgres los hace cumplir aunque la interfaz tenga un bug.",
+            "Nada se pierde: lo firmado es inmutable, y cada cambio y cada lectura quedan en un registro de auditoría.",
+            "Los permisos se prueban, no se suponen: la matriz de permisos y cada política de RLS corren contra un Postgres real en CI.",
           ],
           stack: RECORDS_STACK,
           images: [
@@ -197,11 +197,11 @@ export const content: Record<Lang, Content> = {
           name: "Sistema de operaciones multiempresa",
           kind: "Proyecto para cliente",
           status: "En desarrollo",
-          summary: "Software de operaciones para una empresa de servicios de campo, armado alrededor de una pregunta: qué hay que hacer ahora.",
+          summary: "Software de operaciones para una empresa de servicios de campo, armado alrededor de la pregunta que su equipo se hace todos los días: qué hay que hacer ahora.",
           points: [
-            "Multiempresa desde el inicio: cada tabla y cada consulta quedan acotadas a la empresa en el servidor.",
-            "El tablero de pendientes se calcula en el servidor, así lo que está atrasado no depende de la zona horaria de quien mira.",
-            "Decisiones de arquitectura documentadas como ADR y aplicadas por el linter: los componentes no tocan la base, y ningún color vive fuera de los tokens del tema.",
+            "Pensado para muchas empresas desde el día uno: cada tabla y cada consulta quedan acotadas a una empresa en el servidor.",
+            "Una pantalla responde la pregunta del día: el tablero de pendientes se calcula en el servidor, así que \"atrasado\" nunca depende de la zona horaria de quien mira.",
+            "Reglas que el código no puede olvidar: las decisiones de arquitectura quedan como ADR y las hace cumplir el linter, del acceso a la base a los colores del tema.",
           ],
           stack: OPS_STACK,
           images: [
@@ -226,9 +226,9 @@ export const content: Record<Lang, Content> = {
     experience: {
       title: "Experiencia",
       roles: [
-        { dates: "2026 - hoy", title: "Desarrollador Full Stack freelance", org: "Independiente", note: "Desarrollo dos sistemas para clientes de punta a punta, del modelo de datos a la interfaz." },
-        { dates: "2026 - hoy", title: "Soporte Técnico y Docente", org: "MoscaLabs", note: "Enseño programación y robótica a niños de 5 a 12 años y reparo los circuitos y equipos que usamos." },
-        { dates: "2021 - 2024", title: "Desarrollador de Software", org: "Handy", note: "Construí alertas en AWS para fraude y errores de pago en una fintech con unos 20.000 comercios. Después pasé al front-end en Angular." },
+        { dates: "2026 - hoy", title: "Desarrollador Full Stack freelance", org: "Independiente", note: "Diseño y desarrollo dos sistemas para clientes de punta a punta: modelo de datos, políticas de seguridad, lógica de servidor e interfaz." },
+        { dates: "2026 - hoy", title: "Soporte Técnico y Docente", org: "MoscaLabs", note: "Enseño programación y robótica a niños de 5 a 12 años y mantengo funcionando los circuitos y equipos del laboratorio." },
+        { dates: "2021 - 2024", title: "Desarrollador de Software", org: "Handy", note: "Construí las alertas en AWS (CloudWatch, Lambda, SNS) que detectaban fraude y pagos fallidos y le llevaban cada error a quien podía resolverlo, en una fintech con unos 20.000 comercios. Después pasé al front-end en Angular." },
       ],
       educationTitle: "Formación",
       education: [
