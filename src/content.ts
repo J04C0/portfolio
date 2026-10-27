@@ -46,12 +46,12 @@ export const content: Record<Lang, Content> = {
   en: {
     meta: {
       title: "Joaquín Gomensoro | Full stack developer",
-      description: "Full stack developer in Montevideo, Uruguay. I build the parts of software that can't fail quietly: access control, audit trails and alerting.",
+      description: "Full stack developer in Montevideo, Uruguay. I build the parts of software that can't fail silently: access control, audit trails and alerting.",
     },
     nav: { about: "About", work: "Work", experience: "Experience", contact: "Contact", other: "ES" },
     hero: {
       title: ["Full stack developer.", "Electronic engineering student."],
-      sub: "I build the parts of software that can't fail quietly: access control, audit trails and alerting.",
+      sub: "I build the parts of software that can't fail silently: access control, audit trails and alerting.",
       ctaWork: "View work",
       ctaCv: "Download CV",
     },
@@ -60,9 +60,9 @@ export const content: Record<Lang, Content> = {
       paragraphs: [
         "Hi, I'm Joaco, a full stack developer from Montevideo. Most of my work lives where users never look: who can see which data, what gets recorded, and who finds out when something breaks.",
         "I spent three years at Handy, a payments fintech serving about 20,000 small businesses, building the AWS alerting that caught fraud and failed transactions and sent each one to the person who could fix it. Today I build two client systems end to end, from the database schema and its security policies to the interface.",
-        "I'm also in my third year of Electronic Engineering, so I work on both sides of the wire: TypeScript for the web, a soldering iron and an Arduino for the rest.",
+        "I'm also in my third year of Electronic Engineering, so I work across the hardware/software line: TypeScript for the web, a soldering iron and an Arduino for everything else.",
         "At MoscaLabs I teach programming and robotics to kids aged 5 to 12, which comes down to taking something complex and making it simple enough for them to build themselves.",
-        "Outside of work, I like to clear my head with sport, especially climbing.",
+        "Outside of work, I clear my head with sports, especially climbing.",
       ],
     },
     work: {
@@ -114,8 +114,8 @@ export const content: Record<Lang, Content> = {
       status: "In daily use",
       text: "I send a text or a voice note with an expense and it lands in my spreadsheet. Claude reads the message, n8n does the rest.",
       facts: [
-        "Runs 24/7 on a Docker container in an Oracle Cloud VM.",
-        "Tracks credit card installments by each card's billing cycle.",
+        "Runs 24/7 in a Docker container on an Oracle Cloud VM.",
+        "Tracks credit card installments against each card's billing cycle.",
         "Sends a monthly summary and reminders on its own.",
       ],
       stack: BOT_STACK,
@@ -123,14 +123,14 @@ export const content: Record<Lang, Content> = {
     experience: {
       title: "Experience",
       roles: [
-        { dates: "2026 - now", title: "Freelance Full Stack Developer", org: "Independent", note: "Design and build two client systems end to end: data model, security policies, server logic and interface." },
-        { dates: "2026 - now", title: "Technical Support & Instructor", org: "MoscaLabs", note: "Teach programming and robotics to kids aged 5 to 12, and keep the lab's circuits and equipment running." },
+        { dates: "2026 - present", title: "Freelance Full Stack Developer", org: "Independent", note: "Design and build two client systems end to end: data model, security policies, server logic and interface." },
+        { dates: "2026 - present", title: "Technical Support & Instructor", org: "MoscaLabs", note: "Teach programming and robotics to kids aged 5 to 12, and keep the lab's circuits and equipment running." },
         { dates: "2021 - 2024", title: "Software Developer", org: "Handy", note: "Built the AWS alerting (CloudWatch, Lambda, SNS) that flagged fraud and failed payments and routed each error to whoever could fix it, at a fintech serving about 20,000 small businesses. Later moved to the Angular front end." },
       ],
       educationTitle: "Education",
       education: [
-        { dates: "Expected 2029", title: "Electronic Engineering", org: "Universidad ORT Uruguay", note: "Third year, after two years of Systems Engineering." },
-        { dates: "2019", title: "IB Diploma", org: "The British Schools of Montevideo", note: "Full schooling in English." },
+        { dates: "Expected 2029", title: "Electronic Engineering", org: "Universidad ORT Uruguay", note: "Third year, after switching from Systems Engineering." },
+        { dates: "2019", title: "IB Diploma", org: "The British Schools of Montevideo", note: "English-medium school, kindergarten through IB." },
       ],
       languagesTitle: "Languages",
       languages: "Spanish (native), English (native-level).",
@@ -153,21 +153,21 @@ export const content: Record<Lang, Content> = {
   es: {
     meta: {
       title: "Joaquín Gomensoro | Desarrollador full stack",
-      description: "Desarrollador full stack en Montevideo, Uruguay. Construyo las partes del software que no pueden fallar en silencio: control de acceso, auditoría y alertas.",
+      description: "Desarrollador full stack en Montevideo, Uruguay. Construyo las partes del software que no pueden fallar sin que nadie se entere: control de acceso, auditoría y alertas.",
     },
     nav: { about: "Sobre mí", work: "Proyectos", experience: "Experiencia", contact: "Contacto", other: "EN" },
     hero: {
       title: ["Desarrollador full stack.", "Estudiante de electrónica."],
-      sub: "Construyo las partes del software que no pueden fallar en silencio: control de acceso, auditoría y alertas.",
+      sub: "Construyo las partes del software que no pueden fallar sin que nadie se entere: control de acceso, auditoría y alertas.",
       ctaWork: "Ver proyectos",
       ctaCv: "Descargar CV",
     },
     about: {
       title: "Sobre mí",
       paragraphs: [
-        "Hola, soy Joaco, desarrollador full stack de Montevideo. La mayor parte de mi trabajo vive donde el usuario no mira: quién puede ver qué datos, qué queda registrado y quién se entera cuando algo se rompe.",
+        "Hola, soy Joaco, desarrollador full stack de Montevideo. La mayor parte de mi trabajo está donde el usuario no mira: quién puede ver qué datos, qué queda registrado y quién se entera cuando algo se rompe.",
         "Estuve tres años en Handy, una fintech de pagos con unos 20.000 comercios, construyendo las alertas en AWS que detectaban fraude y transacciones fallidas y le llegaban a quien podía resolverlas. Hoy desarrollo dos sistemas para clientes de punta a punta, del esquema de la base y sus políticas de seguridad a la interfaz.",
-        "Además curso tercer año de Ingeniería Electrónica, así que trabajo de los dos lados del cable: TypeScript para la web, soldador y Arduino para el resto.",
+        "Además curso tercer año de Ingeniería Electrónica, así que trabajo tanto en software como en hardware: TypeScript para la web, soldador y Arduino para todo lo demás.",
         "En MoscaLabs enseño programación y robótica a niños de 5 a 12 años, que en el fondo es agarrar algo complejo y volverlo lo bastante simple como para que lo construyan ellos mismos.",
         "Fuera del trabajo, me gusta despejar la cabeza con el deporte, sobre todo con la escalada.",
       ],
@@ -186,9 +186,9 @@ export const content: Record<Lang, Content> = {
           status: "En desarrollo",
           summary: "Un back office para datos personales sensibles, donde quién ve qué importa tanto como cualquier funcionalidad.",
           points: [
-            "El acceso vive en la base de datos: los permisos se otorgan por registro y por persona, y la seguridad a nivel de fila de Postgres los hace cumplir aunque la interfaz tenga un bug.",
+            "El control de acceso está en la base de datos: los permisos se otorgan por registro y por persona, y la seguridad a nivel de fila de Postgres los garantiza aunque la interfaz tenga un bug.",
             "Nada se pierde: lo firmado es inmutable, y cada cambio y cada lectura quedan en un registro de auditoría.",
-            "Los permisos se prueban, no se suponen: la matriz de permisos y cada política de RLS corren contra un Postgres real en CI.",
+            "Los permisos se prueban, no se suponen: la matriz de permisos y cada política de RLS se verifican contra un Postgres real en el CI.",
           ],
           stack: RECORDS_STACK,
           images: [
@@ -203,7 +203,7 @@ export const content: Record<Lang, Content> = {
           status: "En desarrollo",
           summary: "Software de operaciones para una empresa de servicios de campo, armado alrededor de la pregunta que su equipo se hace todos los días: qué hay que hacer ahora.",
           points: [
-            "Pensado para muchas empresas desde el día uno: cada tabla y cada consulta quedan acotadas a una empresa en el servidor.",
+            "Pensado para muchas empresas desde el primer día: cada tabla y cada consulta quedan acotadas a una empresa en el servidor.",
             "Una pantalla responde la pregunta del día: el tablero de pendientes se calcula en el servidor, así que \"atrasado\" nunca depende de la zona horaria de quien mira.",
             "Reglas que el código no puede olvidar: las decisiones de arquitectura quedan como ADR y las hace cumplir el linter, del acceso a la base a los colores del tema.",
           ],
@@ -223,7 +223,7 @@ export const content: Record<Lang, Content> = {
       facts: [
         "Corre 24/7 en un contenedor Docker sobre una VM de Oracle Cloud.",
         "Lleva las cuotas de cada tarjeta según su fecha de cierre.",
-        "Manda solo un resumen mensual y recordatorios.",
+        "Manda por su cuenta un resumen mensual y recordatorios.",
       ],
       stack: BOT_STACK,
     },
@@ -236,7 +236,7 @@ export const content: Record<Lang, Content> = {
       ],
       educationTitle: "Formación",
       education: [
-        { dates: "Egreso 2029", title: "Ingeniería Electrónica", org: "Universidad ORT Uruguay", note: "Tercer año, después de dos años de Ingeniería en Sistemas." },
+        { dates: "Egreso 2029", title: "Ingeniería Electrónica", org: "Universidad ORT Uruguay", note: "Tercer año, después de pasarme desde Ingeniería en Sistemas." },
         { dates: "2019", title: "Bachillerato Internacional (IB)", org: "The British Schools of Montevideo", note: "Escolaridad completa en inglés." },
       ],
       languagesTitle: "Idiomas",
@@ -246,7 +246,7 @@ export const content: Record<Lang, Content> = {
       title: "Con qué trabajo",
       groups: [
         { name: "Web", items: ["TypeScript", "React", "Next.js", "Angular", "Node.js", "HTML y CSS"] },
-        { name: "Datos y cloud", items: ["PostgreSQL", "Supabase", "SQL", "AWS CloudWatch", "AWS Lambda", "AWS SNS", "Docker"] },
+        { name: "Datos y nube", items: ["PostgreSQL", "Supabase", "SQL", "AWS CloudWatch", "AWS Lambda", "AWS SNS", "Docker"] },
         { name: "Hardware", items: ["Soldadura", "Arduino", "Diseño de PCB en Fusion", "Reparación de circuitos"] },
         { name: "Además", items: ["C++", ".NET", "n8n", "Git", "GitHub Actions", "Scrum"] },
       ],
