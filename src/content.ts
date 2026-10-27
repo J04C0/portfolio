@@ -28,7 +28,7 @@ type Content = {
   bot: { title: string; kind: string; status: string; text: string; facts: string[]; stack: string[] };
   experience: { title: string; roles: Role[]; educationTitle: string; education: Role[]; languagesTitle: string; languages: string };
   skills: { title: string; groups: { name: string; items: string[] }[] };
-  contact: { title: string; text: string; cvTitle: string; cvs: { label: string; href: string }[] };
+  contact: { title: string; cvTitle: string; cvs: { label: string; href: string }[] };
 };
 
 const RECORDS_STACK = ["Next.js", "TypeScript", "PostgreSQL", "Supabase", "Mantine", "Zod", "Vitest"];
@@ -51,7 +51,7 @@ export const content: Record<Lang, Content> = {
     nav: { about: "About", work: "Work", experience: "Experience", contact: "Contact", other: "ES" },
     hero: {
       title: ["Full stack developer.", "Electronic engineering student."],
-      sub: "Three years building payment alerting at a fintech. Now building management systems for real clients, remotely from Uruguay.",
+      sub: "Three years building payment alerting at a fintech. Now building management systems for real clients.",
       ctaWork: "View work",
       ctaCv: "Download CV",
     },
@@ -144,7 +144,6 @@ export const content: Record<Lang, Content> = {
     },
     contact: {
       title: "Let's talk",
-      text: "I'm looking for a remote full stack or backend role, or something where hardware meets software.",
       cvTitle: "CV",
       cvs: CVS_EN,
     },
@@ -250,7 +249,6 @@ export const content: Record<Lang, Content> = {
     },
     contact: {
       title: "Hablemos",
-      text: "Busco un rol remoto full stack o backend, o algo donde el hardware se cruce con el software.",
       cvTitle: "CV",
       cvs: [CVS_EN[2], CVS_EN[3], CVS_EN[0], CVS_EN[1]],
     },

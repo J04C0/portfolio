@@ -213,7 +213,6 @@ export function Home({ lang }: { lang: Lang }) {
         <section id="contact" className="grid gap-12 border-t border-line py-20 md:py-28 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <h2 className="text-4xl font-semibold tracking-tighter md:text-6xl">{t.contact.title}</h2>
-            <p className="mt-5 max-w-[48ch] text-lg leading-relaxed text-muted">{t.contact.text}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-medium text-accent-ink transition-transform active:scale-[0.98]">
                 <EnvelopeSimple size={16} weight="bold" />
