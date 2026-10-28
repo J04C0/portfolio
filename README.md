@@ -1,6 +1,8 @@
 # Joaquín Gomensoro, portfolio
 
-Personal portfolio. Static site built with Next.js, TypeScript and Tailwind CSS, in English (`/`) and Spanish (`/es`).
+Personal portfolio, live at [www.joaquingomensoro.uy](https://www.joaquingomensoro.uy). Static site built with Next.js, TypeScript and Tailwind CSS, in English (`/`) and Spanish (`/es`).
+
+Hosted on Vercel: every push to `main` deploys. The domain's DNS is managed by Vercel, and the bare domain redirects to `www`, which is why `SITE` in `src/components/Shell.tsx` uses `www`.
 
 ```bash
 npm install
