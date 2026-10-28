@@ -5,7 +5,8 @@ import { content, type Lang } from "@/content";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-export const SITE = "https://joaquingomensoro.uy";
+// Vercel redirige el dominio sin www a www.
+export const SITE = "https://www.joaquingomensoro.uy";
 
 export function metadataFor(lang: Lang): Metadata {
   const { title, description } = content[lang].meta;
