@@ -28,19 +28,15 @@ type Content = {
   bot: { title: string; kind: string; status: string; text: string; facts: string[]; stack: string[] };
   experience: { title: string; roles: Role[]; educationTitle: string; education: Role[]; languagesTitle: string; languages: string };
   skills: { title: string; groups: { name: string; items: string[] }[] };
-  contact: { title: string; cvTitle: string; cvs: { label: string; href: string }[] };
+  contact: { title: string; cvTitle: string; cv: { label: string; href: string } };
 };
 
 const RECORDS_STACK = ["Next.js", "TypeScript", "PostgreSQL", "Supabase", "Mantine", "Zod", "Vitest"];
 const OPS_STACK = ["Next.js", "TypeScript", "PostgreSQL", "Supabase", "GitHub Actions"];
 const BOT_STACK = ["n8n", "Docker", "Oracle Cloud", "Claude API", "WhatsApp Cloud API", "Google Sheets"];
 
-const CVS_EN = [
-  { label: "Software (EN)", href: "/cv/CV_Joaquin_Gomensoro_Software_EN.pdf" },
-  { label: "Hardware (EN)", href: "/cv/CV_Joaquin_Gomensoro_Hardware_EN.pdf" },
-  { label: "Software (ES)", href: "/cv/CV_Joaquin_Gomensoro_Software_ES.pdf" },
-  { label: "Hardware (ES)", href: "/cv/CV_Joaquin_Gomensoro_Hardware_ES.pdf" },
-];
+// Un CV por idioma, con el mismo nombre de archivo en los dos.
+export const CV_FILENAME = "JoaquinGomensoro_CV.pdf";
 
 export const content: Record<Lang, Content> = {
   en: {
@@ -147,7 +143,7 @@ export const content: Record<Lang, Content> = {
     contact: {
       title: "Let's talk",
       cvTitle: "CV",
-      cvs: CVS_EN,
+      cv: { label: "Download CV (PDF)", href: `/cv/en/${CV_FILENAME}` },
     },
   },
   es: {
@@ -254,7 +250,7 @@ export const content: Record<Lang, Content> = {
     contact: {
       title: "Hablemos",
       cvTitle: "CV",
-      cvs: [CVS_EN[2], CVS_EN[3], CVS_EN[0], CVS_EN[1]],
+      cv: { label: "Descargar CV (PDF)", href: `/cv/es/${CV_FILENAME}` },
     },
   },
 };

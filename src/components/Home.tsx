@@ -1,5 +1,5 @@
 import { ArrowDownRight, ArrowUpRight, DownloadSimple, EnvelopeSimple, LinkedinLogo } from "@phosphor-icons/react/dist/ssr";
-import { content, type Lang, type Project } from "@/content";
+import { content, CV_FILENAME, type Lang, type Project } from "@/content";
 import { Shot } from "./Shot";
 
 const EMAIL = "joaquin.gomensoro1@gmail.com";
@@ -69,7 +69,7 @@ function ProjectBlock({ p, flip, lang }: { p: Project; flip: boolean; lang: Lang
 export function Home({ lang }: { lang: Lang }) {
   const t = content[lang];
   const other = lang === "en" ? "/es" : "/";
-  const mainCv = t.contact.cvs[0].href;
+  const mainCv = t.contact.cv.href;
 
   return (
     <>
@@ -106,7 +106,7 @@ export function Home({ lang }: { lang: Lang }) {
                 {t.hero.ctaWork}
                 <ArrowDownRight size={16} weight="bold" />
               </a>
-              <a href={mainCv} download className="inline-flex items-center gap-2 rounded-xl border border-line px-5 py-3 text-sm font-medium whitespace-nowrap transition-colors hover:border-text active:scale-[0.98]">
+              <a href={mainCv} download={CV_FILENAME} className="inline-flex items-center gap-2 rounded-xl border border-line px-5 py-3 text-sm font-medium whitespace-nowrap transition-colors hover:border-text active:scale-[0.98]">
                 {t.hero.ctaCv}
                 <DownloadSimple size={16} weight="bold" />
               </a>
@@ -180,7 +180,7 @@ export function Home({ lang }: { lang: Lang }) {
                 </li>
               ))}
             </ol>
-            <a href={mainCv} download className="group mt-8 inline-flex items-center gap-2 font-medium text-accent">
+            <a href={mainCv} download={CV_FILENAME} className="group mt-8 inline-flex items-center gap-2 font-medium text-accent">
               {t.hero.ctaCv}
               <DownloadSimple size={16} weight="bold" className="transition-transform group-hover:translate-y-0.5" />
             </a>
@@ -238,16 +238,10 @@ export function Home({ lang }: { lang: Lang }) {
           </div>
           <div className="lg:col-span-5 lg:pt-3">
             <h3 className="text-sm font-semibold">{t.contact.cvTitle}</h3>
-            <ul className="mt-4 grid grid-cols-2 gap-3">
-              {t.contact.cvs.map((cv) => (
-                <li key={cv.href}>
-                  <a href={cv.href} download className="flex items-center justify-between gap-2 rounded-xl border border-line px-4 py-3 text-sm transition-colors hover:border-text">
-                    {cv.label}
-                    <DownloadSimple size={16} className="text-muted" />
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <a href={t.contact.cv.href} download={CV_FILENAME} className="mt-4 flex items-center justify-between gap-2 rounded-xl border border-line px-4 py-3 text-sm transition-colors hover:border-text">
+              {t.contact.cv.label}
+              <DownloadSimple size={16} className="text-muted" />
+            </a>
           </div>
         </section>
       </main>
