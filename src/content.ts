@@ -137,7 +137,7 @@ export const content: Record<Lang, Content> = {
         { name: "Web", items: ["TypeScript", "React", "Next.js", "Angular", "Node.js", "HTML & CSS"] },
         { name: "Data & cloud", items: ["PostgreSQL", "Supabase", "SQL", "AWS CloudWatch", "AWS Lambda", "AWS SNS", "Docker"] },
         { name: "Hardware", items: ["Soldering", "Arduino", "PCB design in Fusion", "Circuit repair"] },
-        { name: "Also", items: ["C++", ".NET", "n8n", "Git", "GitHub Actions", "Scrum"] },
+        { name: "Also", items: ["Java", "C#", "C++", ".NET", "n8n", "Git", "GitHub Actions", "Scrum"] },
       ],
     },
     contact: {
@@ -244,7 +244,7 @@ export const content: Record<Lang, Content> = {
         { name: "Web", items: ["TypeScript", "React", "Next.js", "Angular", "Node.js", "HTML y CSS"] },
         { name: "Datos y nube", items: ["PostgreSQL", "Supabase", "SQL", "AWS CloudWatch", "AWS Lambda", "AWS SNS", "Docker"] },
         { name: "Hardware", items: ["Soldadura", "Arduino", "Diseño de PCB en Fusion", "Reparación de circuitos"] },
-        { name: "Además", items: ["C++", ".NET", "n8n", "Git", "GitHub Actions", "Scrum"] },
+        { name: "Además", items: ["Java", "C#", "C++", ".NET", "n8n", "Git", "GitHub Actions", "Scrum"] },
       ],
     },
     contact: {
